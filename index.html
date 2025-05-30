@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -7,7 +7,32 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Header -->
+    <header class="header">
+      <!-- Logo -->
+      <div class="container-logo">
+        <div class="container-logo__logo">
+          <img src="./public/logo.png" alt="Logo" class="container-logo__img">
+        </div>
+        <span class="container-logo__txt">Logo</span>
+      </div>
+      <!-- Menu de navegacion de opciones -->
+      <nav class="menu-navegacion">
+        <ul class="menu-navegacion__opciones">
+          <li class="menu-navegacion__opcion">
+            <a href="#" class="menu-navegacion__link">Categorias</a>
+          </li>
+          <li class="menu-navegacion__opcion">
+            <a href="#" class="menu-navegacion__link">Productos</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Menu de navegacion de logueo -->
+      <nav class="menu-autentication">
+        <a href="#" class="menu-autentication__link">Log In</a>
+        <a href="#" class="menu-autentication__link">Sign up</a>
+      </nav>
+    </header>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
