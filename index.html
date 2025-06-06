@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>ADSOFTWARE</title>
   </head>
   <body>
     <!-- Header -->
@@ -14,23 +14,30 @@
         <div class="container-logo__logo">
           <img src="./public/logo.png" alt="Logo" class="container-logo__img">
         </div>
-        <span class="container-logo__txt">Logo</span>
+        <span class="container-logo__txt">ADSOFTWARE</span>
       </div>
       <!-- Menu de navegacion de opciones -->
-      <nav class="menu-navegacion">
+      <nav class="menu-navegacion menu-navegacion--sections">
         <ul class="menu-navegacion__opciones">
           <li class="menu-navegacion__opcion">
             <a href="#" class="menu-navegacion__link">Categorias</a>
           </li>
+          <hr class="separador">
           <li class="menu-navegacion__opcion">
             <a href="#" class="menu-navegacion__link">Productos</a>
           </li>
         </ul>
       </nav>
       <!-- Menu de navegacion de logueo -->
-      <nav class="menu-autentication">
-        <a href="#" class="menu-autentication__link">Log In</a>
-        <a href="#" class="menu-autentication__link">Sign up</a>
+      <nav class="menu-navegacion menu-navegacion--autentication">
+        <ul class="menu-navegacion__opciones menu-navegacion__opciones--autentication">
+          <li class="menu-navegacion__opcion menu-navegacion__opcion--autentication">
+            <a href="#" class="menu-navegacion__link">Log In</a>
+          </li>
+          <li class="menu-navegacion__opcion menu-navegacion__opcion--autentication">
+            <a href="#" class="menu-navegacion__link">Sign up</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <script type="module" src="/src/main.js"></script>
