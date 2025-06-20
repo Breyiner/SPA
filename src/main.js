@@ -1,5 +1,6 @@
 import './style.css'
 import {categoriaController} from './views/Categorias/categoriasController.js';
+import {nuevaCategoriaController} from './views/Categorias/nuevaCategoriaController.js';
 import {productoController} from './views/Productos/productosController.js';
 
 // variables
@@ -14,38 +15,33 @@ let rutas = [
     name: 'Productos',
     path: './src/views/Productos/index.html',
     controller : productoController
+  },
+  {
+    name: 'nuevaCategoria',
+    path: './src/views/Categorias/nuevaCategoria.html',
+    controller : nuevaCategoriaController
   }
 ]
 
-// funciones
-let solicitud = async (ruta) => {
-  let data = await fetch(ruta);
-
-  return data.text();
-}
-
+//
 let obtenerVista = (vista) => {
   return rutas.find(elemento => elemento.name === vista);
 }
 
+//
 let cargarVista = async (vista) => {
 
   let vistaObtenida = obtenerVista(vista);
   console.log(vistaObtenida);
   
-  
   const main = document.querySelector('.main');
   
   let section = "";
-  if (vistaObtenida) {
-    section = await solicitud(vistaObtenida.path);
-    main.innerHTML = section;
+
+    section = await fetch(vistaObtenida.path);
+    main.innerHTML = await section.text();
     vistaObtenida.controller();
-  }
-  else {
-    section = await solicitud('./src/views/404/index.html');
-    main.innerHTML = section;
-  }
+
 }
 
 // eventos
@@ -54,7 +50,7 @@ window.addEventListener("hashchange", () => {
   console.log(vista);
   cargarVista(vista);
 });
-
+//
 window.addEventListener("DOMContentLoaded", () => {
   let vista = location.hash.slice(1);
 

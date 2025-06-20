@@ -89,3 +89,136 @@ body {
 .menu-navegacion__opcion--autentication {
   width: 90px;
 }
+
+
+
+.content {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header-tabla {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boton {
+  text-decoration: none;
+  color: var(--white);
+  background-color: rgba(44, 106, 53, 0.85);;
+  padding: 10px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.boton:hover {
+  transition: 0.3s;
+  background-color: var(--colorHover);
+}
+
+.boton--editar {
+  padding: 7px;
+  background-color: rgb(91, 152, 209);
+}
+
+.boton--editar:hover {
+  transition: 0.3s;
+  background-color: rgb(44, 94, 141);
+}
+
+.boton--eliminar {
+  padding: 7px;
+  background-color: rgb(209, 91, 91);
+}
+
+.boton--eliminar:hover {
+  transition: 0.3s;
+  background-color: rgb(136, 36, 36);
+}
+
+.tabla {
+  box-shadow: 0 0 5px #000;
+  border-radius: 10px;
+  border-collapse: collapse;
+  width: 800px;
+  height: max-content;
+  overflow: hidden;
+}
+
+.tabla__header {
+  background-color: rgb(65, 201, 122);
+}
+
+.tabla__celda {
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px;
+  background-color: #ffffff;
+  height: max-content;
+  width: max-content;
+  box-shadow: 0 0 10px #115136;
+  border-radius: 20px;
+}
+
+.form__titulo {
+  font-size: 2rem;
+  color: #115136;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form__campo {
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-bottom: 2px solid #000;
+  width: 300px;
+  background-color: transparent;
+}
+
+.form__campo:focus {
+  border-color: #199e67;
+}
+
+.form__nombre-campo {
+  font-weight: bold;
+}
+
+.form__campo--descripcion {
+  height: 100px;
+  resize: none;
+}
+
+.boton--agregar {
+  cursor: pointer;
+  border: none;
+  min-width: 100px;
+}
