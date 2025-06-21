@@ -13,6 +13,7 @@
 
 body {
   background-color: var(--colorBackground);
+  overflow: hidden;
 }
 
 .header{ 
@@ -192,20 +193,29 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: relative;
 }
 
 .form__campo {
-  font-size: 1.2rem;
+  /* font-size: 1.1rem; */
   border: none;
   outline: none;
   padding: 5px;
   border-bottom: 2px solid #000;
   width: 300px;
-  background-color: transparent;
+  background-color: #dcdcdc2b;
 }
 
 .form__campo:focus {
   border-color: #199e67;
+}
+
+.error::after {
+  content: var(--error-message);
+  color: red;
+  position: absolute;
+  bottom: -30px;
+  right: 0;
 }
 
 .form__nombre-campo {
@@ -221,4 +231,11 @@ body {
   cursor: pointer;
   border: none;
   min-width: 100px;
+}
+
+@media (max-width: 1300px) {
+  .form {
+    padding: 30px;
+    gap: 40px;
+  }
 }
